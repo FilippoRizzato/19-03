@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VynilOP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .footer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px; /* Adjust gap between images as needed */
+            justify-items: center;
+            align-items: center;
+        }
+        .footer img {
+            width: 200px; /* Adjust the width as needed */
+            height: auto;
+        }
+        .footer .product {
+            text-align: center;
+        }
+        .discount-voucher {
+            text-align: center;
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <nav class="nav">
+            <a href="login.php">ACCEDI</a>
+            <a href="#">ESCI</a>
+            <a href="register.php">REGISTRATI</a>
+        </nav>
+        <div class="logo text-center">
+            <img src="Screenshot%202025-02-04%20083718.png" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Cerca...">
+            <button type="button">🔍</button>
+        </div>
+    </div>
+</header>
+
+
+<div class="content" style="padding-top: 100px;">
+    <div class="carousel">
+        <img src="https://www.disclan.com/164321-large_default/house-of-balloons-10th-anniversary-weeknd-the-lp.jpg" alt="Copertina Album Make It Fit" class="active">
+        <img src="https://www.disclan.com/157466-large_default/igor-tyler-the-creator-lp.jpg" alt="Album 1">
+        <img src="https://www.disclan.com/158975-large_default/dawn-fm-weeknd-the-cd.jpg" alt="Album 2">
+        <img src="https://www.disclan.com/162611-large_default/lamb-as-effigy-.jpg" alt="Album 3">
+    </div>
+    <p class="description">Un piccolo assaggio dei nostri prodotti</p>
+
+    <div class="footer">
+        <div class="product">
+            <a href="prodotto.html">
+                <img src="https://www.disclan.com/150738-home_default/damn-lamar-kendrick-lp.jpg" alt="DAMN. - Kendrick Lamar">
+                <h3>DAMN. - Kendrick Lamar</h3>
+                <p>€44.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://www.disclan.com/160944-home_default/all-eyez-on-me-2pac-lp.jpg" alt="All Eyez On Me - 2Pac">
+            <h3>All Eyez On Me - 2Pac</h3>
+            <p>€34.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://www.disclan.com/162611-home_default/lamb-as-effigy-.jpg" alt="Effigy - Lamb As">
+            <h3>Effigy - Lamb As</h3>
+            <p>€24.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://www.disclan.com/163550-home_default/madra-indie-exclusive-green-vinyl.jpg" alt="Madra - Indie Exclusive">
+            <h3>Madra - Indie Exclusive</h3>
+            <p>€22.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://www.disclan.com/163490-home_default/the-razors-edge-lp-colore-oro-ac-dc-lp.jpg" alt="The Razors Edge - AC/DC">
+            <h3>The Razors Edge - AC/DC</h3>
+            <p>€39.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://www.disclan.com/163445-home_default/where-is-my-utopia-colored-vinyl-indie-exclusive-ltd-ed.jpg" alt="Where Is My Utopia - Indie Exclusive">
+            <h3>Where Is My Utopia - Indie Exclusive</h3>
+            <p>€26.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://www.disclan.com/163881-home_default/lives-outgrown-deluxe-indie-only.jpg" alt="Lives Outgrown - Deluxe">
+            <h3>Lives Outgrown - Deluxe</h3>
+            <p>€28.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://www.disclan.com/163488-home_default/for-those-about-to-rock-we-salute-you-lp-colore-oro-ac-dc-lp.jpg" alt="For Those About to Rock - AC/DC">
+            <h3>For Those About to Rock - AC/DC</h3>
+            <p>€38.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://www.disclan.com/163491-home_default/who-made-who-lp-colore-oro-ac-dc-lp.jpg" alt="Who Made Who - AC/DC">
+            <h3>Who Made Who - AC/DC</h3>
+            <p>€37.99</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="discount-voucher">
+        <h2>Buono Sconto</h2>
+        <p>Inserisci il codice <strong>SAVE10</strong> al momento del pagamento per ottenere uno sconto del 10% sul tuo ordine!</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Disclan. Tutti i diritti riservati.</p>
+</footer>
+
+<script>
+    const images = document.querySelectorAll('.carousel img');
+    let currentIndex = 0;
+
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 3000);
+</script>
+
+</body>
+</html>
